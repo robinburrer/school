@@ -1,0 +1,11 @@
+.item {
+  font-size: large;
+  text-decoration: underline;
+  color: grey;
+}
+
+.item--active {
+  color: #96b6c5;
+  font-weight: bold;
+  text-decoration: none;
+}

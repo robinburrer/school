@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 0px;
+  width: 100%;
+  padding: 20px;
+}
+
+.label {
+  width: calc(50% - 20px);
+  text-decoration: underline;
+}
+
+.button {
+  width: calc(50% - 20px);
+}
