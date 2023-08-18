@@ -21,8 +21,7 @@ const Stundents: React.FC<StundentsProps> = () => {
    * studentRemoveHandler
    * @param student
    */
-  const studentRemoveHandler = (s: Entry) => {
-    const student = s as Student;
+  const studentRemoveHandler = (student: Student) => {
     const updatedStundents = students.filter(
       (listStudent) => listStudent.id !== student.id
     );

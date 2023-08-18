@@ -1,19 +1,18 @@
 import React from 'react';
 import styles from './SimpleList.module.css';
-import { Entry } from '../../typesAndEnums/entries';
 import ListEntry from '../listEntry/ListEntry';
 
-interface SimpleListProps {
-  entries: Array<Entry>;
-  onRemoveClick: (entry: Entry) => void;
+interface SimpleListProps<T> {
+  entries: Array<T>;
+  onRemoveClick: (entry: T) => void;
   onLabelClick: () => void;
 }
 
-const SimpleList: React.FC<SimpleListProps> = ({
+const SimpleList = <T extends { id: number; name: string }>({
   entries,
   onRemoveClick,
   onLabelClick,
-}) => {
+}: SimpleListProps<T>) => {
   const sortedEntries = [...entries];
   sortedEntries.sort((a, b) => a.name.localeCompare(b.name));
 

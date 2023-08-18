@@ -22,8 +22,7 @@ const Subjects: React.FC<SubjectsProps> = () => {
    * subjectRemoveHandler
    * @param subject
    */
-  const subjectRemoveHandler = (s: Entry) => {
-    const subject = s as Subject;
+  const subjectRemoveHandler = (subject: Entry) => {
     deleteSubject(subject);
   };
 
